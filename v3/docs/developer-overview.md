@@ -57,25 +57,25 @@ The frontend consists of:
 ```
 visualize.html
 css/opt-frontend.css
-js/opt-frontend.js
-js/opt-frontend-common.js
+js/opt-frontend.ts
+js/opt-frontend-common.ts
 css/pytutor.css
 js/pytutor.js
 <a bunch of auxiliary css and js files such as libraries>
 ```
 
-`pytutor.[js|css]` contain the bulk of the OPT frontend code. In theory, you should be able to **embed** an
+`pytutor.[ts|css]` contain the bulk of the OPT frontend code. In theory, you should be able to **embed** an
 OPT visualization into any webpage with one line of JavaScript that looks like:
 
 ```javascript
 var v = new ExecutionVisualizer(domRoot, traceFromBackend, optionalParams);
 ```
 
-Thus, the design of `pytutor.[js|css]` is meant to be as modular as possible, which means abstracting
+Thus, the design of `pytutor.[ts|css]` is meant to be as modular as possible, which means abstracting
 everything in an `ExecutionVisualizer` class. This way, you can create multiple visualizer objects
 to embed on the same webpage without them interfering with one another.
 
-`opt-frontend.[js|css]` contain code that is specific to the `visualize.html` page and doesn't make sense for, say,
+`opt-frontend.[ts|css]` contain code that is specific to the `visualize.html` page and doesn't make sense for, say,
 embedding OPT visualizations into other webpages.
 
 The Python backend consists of:
