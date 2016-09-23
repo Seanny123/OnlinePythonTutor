@@ -51,7 +51,7 @@ Here is a typical user interaction sequence for Python (this will differ for oth
 5. The frontend switches to a visualization display, parses the execution trace, and renders the appropriate stack frames, heap objects, and pointers.
 6. When the user interacts with the frontend by stepping through execution points, the frontend renders the proper data structures **without** making another subsequent call to the backend.
 
-All relevant files are located in `OnlinePythonTutor/v3/`, since v3 is the currently-active version.
+All relevant files are located in `OnlinePythonTutor/v5-unity/`, since v5 is the currently-active version for frontend development.
 
 The frontend consists of:
 ```
